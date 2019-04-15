@@ -9,4 +9,9 @@
         WHERE user_name=#{userName} and password=#{password}
     </select>
 
+    <select id="getUserById" resultType="User" parameterType="integer">
+        SELECT *
+        FROM user_table
+        WHERE id=#{id}
+    </select>
 </mapper>

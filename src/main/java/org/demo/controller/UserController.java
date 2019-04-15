@@ -1,5 +1,6 @@
 package org.demo.controller;
 
+import org.demo.entity.User;
 import org.demo.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -25,5 +26,12 @@ public class UserController {
     public boolean login(String userName,String password){
         boolean flag = userService.loginCheck(userName,password);
         return flag;
+    }
+
+    @RequestMapping(value = "/login.do",method = RequestMethod.GET)
+    @ResponseBody
+    public User login(Integer id){
+        User user = userService.findUserWithId(id);
+        return user;
     }
 }

@@ -1,6 +1,7 @@
 package org.demo.dao;
 
 import org.apache.ibatis.annotations.Param;
+import org.demo.entity.User;
 
 /**
  * Created with IDEA
@@ -11,4 +12,6 @@ import org.apache.ibatis.annotations.Param;
  */
 public interface UserDao {
     Integer queryUser(@Param("userName")String userName,@Param("password")String password);
+
+    User getUserById(@Param("id")Integer id);
 }

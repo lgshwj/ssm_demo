@@ -1,5 +1,7 @@
 package org.demo.service;
 
+import org.demo.entity.User;
+
 /**
  * Created with IDEA
  * author:ligang
@@ -9,4 +11,6 @@ package org.demo.service;
  */
 public interface UserService {
     boolean loginCheck(String userName,String password);
+
+    User findUserWithId(Integer id);
 }
