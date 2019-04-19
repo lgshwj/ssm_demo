@@ -31,6 +31,7 @@
           <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
       </listener>
 
+      <!--spring ioc配置文件路径-->
       <context-param>
           <param-name>contextConfigLocation</param-name>
           <param-value>
@@ -47,8 +48,9 @@
               <param-value>classpath:spring/spring-web.xml</param-value>
           </init-param>
       </servlet>
-      <servlet-mapping>
-          <servlet-name>demo-dispatcher</servlet-name>
-          <url-pattern>/</url-pattern>
-      </servlet-mapping>
+    <!-- Servlet 拦截配置-->
+  <servlet-mapping>
+      <servlet-name>demo-dispatcher</servlet-name>
+      <url-pattern>/</url-pattern>
+  </servlet-mapping>
 </web-app>

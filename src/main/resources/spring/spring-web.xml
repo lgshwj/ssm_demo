@@ -12,6 +12,7 @@
 
     <!-- 配置SpringMVC-->
     <!--todo 1.开启SpringMVC注解模式 -->
+    <!--使用注解驱动-->
     <!--
         1)自动注册默认的bean：DefaultAnnotationHandlerMapping,AnnotationMethodHandlerAdapter
         2)提供系列功能，数据绑定，数据日期转换，xml，json默认读写支持
